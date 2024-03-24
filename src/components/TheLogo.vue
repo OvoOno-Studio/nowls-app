@@ -4,6 +4,6 @@ import logow from '~/assets/logo.png'
 
 <template>
   <div>
-    <img :src="logow" hover:text-teal-100>
+    <img :src="logow" icon-btn>
   </div>
 </template>

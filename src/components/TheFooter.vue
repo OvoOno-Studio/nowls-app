@@ -10,11 +10,11 @@ const socials = [
   <nav class="flex flex-col items-center justify-center bg-stone-950 p-4">
     <!-- Social Items -->
     <div>
-      <a v-for="social in socials" :key="social.name" :href="social.link" target="_blank" rel="noopener noreferrer" class="hover:text-teal-100">
+      <a v-for="social in socials" :key="social.name" :href="social.link" target="_blank" rel="noopener noreferrer" icon-btn>
         <div :class="`${social.icon} w-20 h-20`" />
       </a>
     </div>
-    <a hover:text-teal-100>
+    <a>
       <TheLogo class="w-20" />
     </a>
     <p class="text-sm font-mono hover:text-teal-100">

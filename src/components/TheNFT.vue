@@ -8,12 +8,10 @@ const images = [nft1, nft2, nft3, nft4]
 </script>
 
 <template>
-  <div class="bg-zinc-900">
-    <div class="flex items-center justify-center">
-      <div class="mx-auto max-w-sm px-2">
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-2">
-          <img v-for="(image, index) in images" :key="index" :src="image" alt="Night Owls Gif" class="w-full sm:w-sm">
-        </div>
+  <div class="flex items-center justify-center bg-transparent">
+    <div class="mx-auto max-w-screen-lg px-2">
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <img v-for="(image, index) in images" :key="index" :src="image" alt="Night Owls Gif" class="h-auto w-full">
       </div>
     </div>
   </div>

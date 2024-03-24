@@ -4,7 +4,7 @@ import logofull from '~/assets/logofull.jpg'
 import owl from '~/assets/owl.gif'
 
 const progress = ref(0)
-const circleLength = 283 // Circumference of the circle with radius 45
+const circleLength = 283
 const showScrollToTop = ref(false)
 
 function updateProgressCircle() {
