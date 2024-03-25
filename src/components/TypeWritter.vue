@@ -47,7 +47,7 @@ export default {
 
 <template>
   <div>
-    <span v-for="(letter, index) in letters" :key="index" class="inline-block font-bold font-sans" :style="{ animationDelay: `${index * 100}ms` }">
+    <span v-for="(letter, index) in letters" :key="index" class="inline-block font-bold font-sans icon-btn" :style="{ animationDelay: `${index * 100}ms` }">
       {{ letter }}
     </span>
   </div>
