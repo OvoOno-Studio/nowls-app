@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-import logofull from '~/assets/logofull.png'
+import logofull from '~/assets/owl.gif'
 
 const progress = ref(0)
 const circleLength = 283
@@ -29,7 +29,7 @@ onMounted(() => {
 
 const sections = [
   { id: 1, text: '$NOWLS', changeable: true, class: 'text-4xl lg:text-7xl' },
-  { id: 2, text: 'SOLLANA', changeable: true, class: 'text-4xl lg:text-7xl' },
+  { id: 2, text: 'SOLANA', changeable: true, class: 'text-4xl lg:text-7xl' },
   { id: 3, text: 'NFT_SUPPLY: 2800', changeable: true, class: 'text-4xl lg:text-7xl' },
   { id: 4, text: '$NOWLS_SUPPLY: 7840000', changeable: true, class: 'text-4xl lg:text-7xl' },
   { id: 5, text: 'PRESALE_PRICE: 0.17', changeable: true, class: 'text-4xl lg:text-7xl' },
