@@ -29,15 +29,16 @@ onMounted(() => {
 
 const sections = [
   { id: 1, text: '$NOWLS', changeable: true, class: 'text-4xl lg:text-7xl' },
-  { id: 2, text: 'SOLANA', changeable: true, class: 'text-4xl lg:text-7xl' },
-  { id: 3, text: 'NFT_SUPPLY: 2800', changeable: true, class: 'text-4xl lg:text-7xl' },
-  { id: 4, text: '$NOWLS_SUPPLY: 7840000', changeable: true, class: 'text-4xl lg:text-7xl' },
-  { id: 5, text: 'PRESALE_PRICE: 0.17', changeable: true, class: 'text-4xl lg:text-7xl' },
-  { id: 6, text: 'DOUBLE_REWARDS_WITH_SECOND_PURCHASE', changeable: true, class: 'text-4xl lg:text-6xl' },
-  { id: 7, text: 'NEVER_SLEEP_GRIND_HARD_HOOT_HOOT', changeable: true, class: 'text-4xl lg:text-6xl' },
+  { id: 2, text: 'NFT + MEMECOIN', changeable: true, class: 'text-4xl lg:text-7xl' },
+  { id: 3, text: 'HOOT_HOOT', changeable: true, class: 'text-4xl lg:text-6xl' },
+  { id: 4, text: 'NFT_SUPPLY: 2800', changeable: true, class: 'text-4xl lg:text-7xl' },
+  { id: 5, text: '$NOWLS_SUPPLY: 28000000', changeable: true, class: 'text-4xl lg:text-7xl' },
+  { id: 6, text: 'PRESALE_PRICE: 0.17 SOL', changeable: true, class: 'text-4xl lg:text-7xl' },
+  { id: 7, text: 'DOUBLE_REWARDS_WITH_SECOND_PURCHASE', changeable: true, class: 'text-4xl lg:text-6xl' },
+  { id: 8, text: 'NEVER_SLEEP', changeable: true, class: 'text-4xl lg:text-6xl' },
 ]
 
-const slider = sections.slice(0, 5)
+const slider = sections.slice(0, 9)
 const nonslider = sections.slice(5)
 </script>
 
