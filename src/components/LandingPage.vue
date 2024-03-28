@@ -75,11 +75,11 @@ const nonslider = sections.slice(5)
       <p class="dis" mb-4 p-4 text-sm text-white lg:text-lg>
         HOOT HOOT
       </p>
-      <a href="https://presale.magiceden.io/pay/66003f930b6090f60835cfce" target="_blank" rel="noopener noreferrer">
-        <button btn>
-          BUY
-        </button>
-      </a>
+      <p>
+        SEND SOL <br> <br>
+
+        3KSbrxNspTmxFVap89w8x4KqXCWN78Q5UzQGHL9B2ZNa
+      </p>
     </div>
   </section>
   <!-- Flexing 1 -->
