@@ -75,7 +75,7 @@ const nonslider = sections.slice(5)
       <p class="dis" mb-4 p-4 text-sm text-white lg:text-lg>
         HOOT HOOT
       </p>
-      <p>
+      <p class="text-center">
         SEND SOL <br> <br>
 
         3KSbrxNspTmxFVap89w8x4KqXCWN78Q5UzQGHL9B2ZNa
