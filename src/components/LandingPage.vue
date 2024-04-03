@@ -105,11 +105,11 @@ const nonslider = sections.slice(5)
     </div>
   </section>
 
-  <section mx-auto min-h-screen flex flex-col items-center justify-center py-4 container md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0>
+  <section mx-auto min-h-screen flex-col items-center justify-center py-4 container lg:flex md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0>
     <img :src="banner" class="lg:w-2/3" mx-auto border-rounded alt="Logo">
   </section>
 
-  <section mx-auto min-h-screen flex flex-col items-center justify-center py-8 container md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0>
+  <section mx-auto min-h-screen flex-col items-center justify-center py-8 container lg:flex md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0>
     <div class="z-50 my-4 flex flex-col whitespace-pre-line text-left font-bold font-sans lg:w-1/3">
       <h2 mb-4 text-3xl lg:text-6xl xl:text-6xl>
         $NOWLS Tokenomics
@@ -140,7 +140,7 @@ const nonslider = sections.slice(5)
   <section mx-auto min-h-screen items-center px-8 container md:flex-row space-y-4 lg:py-4 md:px-20 md:space-x-4 md:space-y-0>
     <img :src="image" mx-auto border-rounded alt="Logo">
     <h2 font-bold lg:px-3 lg:py-5 lg:text-4xl>
-      Currently listed on <a href="https://launchmynft.io/collections/5TMT36ueT1om5ZfwzvZpGFAtzJ6S7GTRrckxrUQqU37W/gf3WfCP7uL4J4kV26uEw">launchmynft.io</a>
+      <a href="https://launchmynft.io/collections/5TMT36ueT1om5ZfwzvZpGFAtzJ6S7GTRrckxrUQqU37W/gf3WfCP7uL4J4kV26uEw"> <u>Mint on launchmynft.io </u> </a>
     </h2>
     <div id="mint-button-container" />
     <div id="mint-counter" />
