@@ -55,6 +55,9 @@ const nonslider = sections.slice(5)
 </script>
 
 <template>
+  <!-- Include External Stylesheet -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/scriptslmt/0.1.3/solana.css">
+
   <!-- progress circle -->
   <div class="progress-circle-container">
     <svg class="progress-circle" viewBox="0 0 100 100">
