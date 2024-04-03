@@ -140,7 +140,7 @@ const nonslider = sections.slice(5)
   <section mx-auto min-h-screen items-center px-8 container md:flex-row space-y-4 lg:py-4 md:px-20 md:space-x-4 md:space-y-0>
     <img :src="image" mx-auto border-rounded alt="Logo">
     <h2 font-bold lg:px-3 lg:py-5 lg:text-4xl>
-      <a href="https://launchmynft.io/collections/5TMT36ueT1om5ZfwzvZpGFAtzJ6S7GTRrckxrUQqU37W/gf3WfCP7uL4J4kV26uEw"> <u>Mint on launchmynft.io </u> </a>
+      <a href="https://launchmynft.io/collections/5TMT36ueT1om5ZfwzvZpGFAtzJ6S7GTRrckxrUQqU37W/gf3WfCP7uL4J4kV26uEw"> Mint on launchmynft.io </a>
     </h2>
     <div id="mint-button-container" />
     <div id="mint-counter" />
