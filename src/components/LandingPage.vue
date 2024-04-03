@@ -1,6 +1,9 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import logofull from '~/assets/owl.gif'
+import banner from '~/assets/bannerNOWLS.jpg'
+import token from '~/assets/nowlsToken.png'
+import image from '~/assets/nowlsImage.jpg'
 
 const progress = ref(0)
 const circleLength = 283
@@ -23,17 +26,26 @@ function scrollToTop() {
 }
 
 onMounted(() => {
+  window.ownerId = '5TMT36ueT1om5ZfwzvZpGFAtzJ6S7GTRrckxrUQqU37W'
+  window.collectionId = 'gf3WfCP7uL4J4kV26uEw'
+
+  // Dynamically load the script
+  const script = document.createElement('script')
+  script.src = 'https://storage.googleapis.com/scriptslmt/0.1.3/solana.js'
+  script.type = 'module'
+  document.head.appendChild(script)
+
   updateProgressCircle()
   window.addEventListener('scroll', updateProgressCircle)
 })
 
 const sections = [
   { id: 1, text: '$NOWLS', changeable: true, class: 'text-4xl lg:text-7xl' },
-  { id: 2, text: 'NFT + MEMECOIN', changeable: true, class: 'text-4xl lg:text-7xl' },
+  { id: 2, text: 'NFT + TOKEN ', changeable: true, class: 'text-4xl lg:text-7xl' },
   { id: 3, text: 'HOOT_HOOT', changeable: true, class: 'text-4xl lg:text-6xl' },
   { id: 4, text: 'NFT_SUPPLY: 2800', changeable: true, class: 'text-4xl lg:text-7xl' },
   { id: 5, text: '$NOWLS_SUPPLY: 28000000', changeable: true, class: 'text-4xl lg:text-7xl' },
-  { id: 6, text: 'PRESALE_PRICE: 0.17 SOL', changeable: true, class: 'text-4xl lg:text-7xl' },
+  { id: 6, text: 'PUBLIC_PRICE: 0.28 SOL', changeable: true, class: 'text-4xl lg:text-7xl' },
   { id: 7, text: 'DOUBLE_REWARDS_WITH_SECOND_PURCHASE', changeable: true, class: 'text-4xl lg:text-6xl' },
   { id: 8, text: 'NEVER_SLEEP', changeable: true, class: 'text-4xl lg:text-6xl' },
 ]
@@ -43,6 +55,9 @@ const nonslider = sections.slice(5)
 </script>
 
 <template>
+  <!-- Include External Stylesheet -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/scriptslmt/0.1.3/solana.css">
+
   <!-- progress circle -->
   <div class="progress-circle-container">
     <svg class="progress-circle" viewBox="0 0 100 100">
@@ -63,25 +78,74 @@ const nonslider = sections.slice(5)
       </div>
     </template>
   </div>
+
   <!-- HOOT HOOT -->
   <section mx-auto min-h-screen flex flex-col items-center justify-center px-8 py-8 container md:flex-row space-y-4 md:px-20 md:space-x-4 md:space-y-0>
-    <div class="lg:w-1/3" mb-4 text-left>
-      <img :src="logofull" alt="Logo">
+    <div class="z-50 my-4 flex flex-col whitespace-pre-line text-left font-bold font-sans lg:w-1/3">
+      <h2 mb-4 text-3xl lg:text-6xl xl:text-6xl>
+        Night Owls
+      </h2>
+      <ul my-3 pl-0>
+        <li xl:text-2xl>
+          NFTS Supply: 2800
+        </li>
+        <li xl:text-2xl>
+          Presale: 0.17 SOL
+        </li>
+        <li xl:text-2xl>
+          Public: 0.28 SOL
+        </li>
+      </ul>
+      <p class="dis" mb-4 pl-0 text-white lg:text-lg>
+        Night Owls on Solana coming in 2800 unique NFTs. Holding NFT will guarantee access to the optimized trading tools with built-in node access. <br> <br> Each wallet will get airdrop of $NOWLS after the public sale.
+      </p>
     </div>
-    <div class="z-50 my-4 flex flex-col items-center justify-center whitespace-pre-line text-left font-bold font-sans lg:w-1/3">
-      <h1 mb-4 text-3xl lg:text-6xl xl:text-6xl>
-        $NOWLS
-      </h1>
-      <p class="dis" mb-4 p-4 text-sm text-white lg:text-lg>
-        HOOT HOOT
-      </p>
-      <p class="text-center">
-        SEND SOL <br> <br>
-
-        3KSbrxNspTmxFVap89w8x4KqXCWN78Q5UzQGHL9B2ZNa
-      </p>
+    <div class="lg:w-1/3" mb-4>
+      <img :src="logofull" mx-auto alt="Logo">
     </div>
   </section>
+
+  <section mx-auto min-h-screen flex flex-col items-center justify-center py-4 container md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0>
+    <img :src="banner" class="lg:w-2/3" mx-auto border-rounded alt="Logo">
+  </section>
+
+  <section mx-auto min-h-screen flex flex-col items-center justify-center py-8 container md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0>
+    <div class="z-50 my-4 flex flex-col whitespace-pre-line text-left font-bold font-sans lg:w-1/3">
+      <h2 mb-4 text-3xl lg:text-6xl xl:text-6xl>
+        $NOWLS Tokenomics
+      </h2>
+      <ul my-3 pl-0>
+        <li xl:text-2xl>
+          Token Supply: 28,000,000
+        </li>
+        <li xl:text-2xl>
+          Liquidity Pool: 14,000,000
+        </li>
+        <li xl:text-2xl>
+          Holder Airdrop: 12,320,000
+        </li>
+        <li xl:text-2xl>
+          Giveaways: 1,680,000
+        </li>
+      </ul>
+      <p class="dis" mb-4 pl-0 text-white lg:text-lg>
+        Profit of sales will go to Liquidity Pool with 14,000,000 $NOWLS token. For holders of Night Owls, 44% of token supply will be airdropped and 6% goes to giveaways.
+      </p>
+    </div>
+    <div class="lg:w-1/3" mb-4>
+      <img :src="token" mx-auto alt="Logo">
+    </div>
+  </section>
+
+  <section mx-auto min-h-screen items-center px-8 container md:flex-row space-y-4 lg:py-4 md:px-20 md:space-x-4 md:space-y-0>
+    <img :src="image" mx-auto border-rounded alt="Logo">
+    <h2 font-bold lg:px-3 lg:py-5 lg:text-4xl>
+      Currently listed on <a href="https://launchmynft.io/collections/5TMT36ueT1om5ZfwzvZpGFAtzJ6S7GTRrckxrUQqU37W/gf3WfCP7uL4J4kV26uEw">launchmynft.io</a>
+    </h2>
+    <div id="mint-button-container" />
+    <div id="mint-counter" />
+  </section>
+
   <!-- Flexing 1 -->
   <section v-if="nonslider[0].text" class="min-h-screen flex items-center justify-center">
     <TypeWritter :text="nonslider[0].text" :changeable="nonslider[0].changeable" class="text-4xl lg:text-6xl" />
