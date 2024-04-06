@@ -15,6 +15,7 @@ declare module 'vue' {
     TheFooter: typeof import('./components/TheFooter.vue')['default']
     TheInput: typeof import('./components/TheInput.vue')['default']
     TheLogo: typeof import('./components/TheLogo.vue')['default']
+    TheLogoCalendar: typeof import('./components/TheLogoCalendar.vue')['default']
     TheNavbar: typeof import('./components/TheNavbar.vue')['default']
     TheNFT: typeof import('./components/TheNFT.vue')['default']
     TypeWritter: typeof import('./components/TypeWritter.vue')['default']
