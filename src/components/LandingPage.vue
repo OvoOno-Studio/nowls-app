@@ -1,9 +1,5 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-import logofull from '~/assets/owl.gif'
-import banner from '~/assets/bannerNOWLS.jpg'
-import token from '~/assets/nowlsToken.png'
-import image from '~/assets/nowlsImage.jpg'
 
 const progress = ref(0)
 const circleLength = 283
@@ -26,15 +22,6 @@ function scrollToTop() {
 }
 
 onMounted(() => {
-  window.ownerId = '5TMT36ueT1om5ZfwzvZpGFAtzJ6S7GTRrckxrUQqU37W'
-  window.collectionId = 'gf3WfCP7uL4J4kV26uEw'
-
-  // Dynamically load the script
-  const script = document.createElement('script')
-  script.src = 'https://storage.googleapis.com/scriptslmt/0.1.3/solana.js'
-  script.type = 'module'
-  document.head.appendChild(script)
-
   updateProgressCircle()
   window.addEventListener('scroll', updateProgressCircle)
 })
@@ -51,7 +38,6 @@ const sections = [
 ]
 
 const slider = sections.slice(0, 9)
-const nonslider = sections.slice(5)
 </script>
 
 <template>
@@ -73,87 +59,20 @@ const nonslider = sections.slice(5)
   <!-- SLIDER -->
   <div class="h-screen flex flex-col gap-0 container md:gap-100">
     <template v-for="(section, index) in slider" :key="index">
-      <div v-if="section.text" class="content min-h-screen min-w-full flex items-center justify-center" :class="section.class">
+      <div v-if="slider[0].text" class="content min-h-screen min-w-full flex items-center justify-center" :class="section.class">
         <TypeWritter :text="section.text" :changeable="section.changeable" />
       </div>
     </template>
   </div>
 
-  <!-- HOOT HOOT -->
-  <section mx-auto min-h-screen flex flex-col items-center justify-center px-8 py-8 container md:flex-row space-y-4 md:px-20 md:space-x-4 md:space-y-0>
-    <div class="z-50 my-4 flex flex-col whitespace-pre-line text-left font-bold font-sans lg:w-1/3">
-      <h2 mb-4 text-3xl lg:text-6xl xl:text-6xl>
-        Night Owls
-      </h2>
-      <ul my-3 pl-0>
-        <li xl:text-2xl>
-          NFTS Supply: 2800
-        </li>
-        <li xl:text-2xl>
-          Presale: 0.17 SOL
-        </li>
-        <li xl:text-2xl>
-          Public: 0.28 SOL
-        </li>
-      </ul>
-      <p class="dis" mb-4 pl-0 text-white lg:text-lg>
-        Night Owls on Solana coming in 2800 unique NFTs. Holding NFT will guarantee access to the optimized trading tools with built-in node access. <br> <br> Each wallet will get airdrop of $NOWLS after the public sale.
-      </p>
-    </div>
-    <div class="lg:w-1/3" mb-4>
-      <img :src="logofull" mx-auto alt="Logo">
-    </div>
-  </section>
-
-  <section mx-auto min-h-screen flex-col items-center justify-center py-4 container lg:flex md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0>
-    <img :src="banner" class="lg:w-2/3" mx-auto border-rounded alt="Logo">
-  </section>
-
-  <section mx-auto min-h-screen flex-col items-center justify-center py-8 container lg:flex md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0>
-    <div class="z-50 my-4 flex flex-col whitespace-pre-line text-left font-bold font-sans lg:w-1/3">
-      <h2 mb-4 text-3xl lg:text-6xl xl:text-6xl>
-        $NOWLS Tokenomics
-      </h2>
-      <ul my-3 pl-0>
-        <li xl:text-2xl>
-          Token Supply: 28,000,000
-        </li>
-        <li xl:text-2xl>
-          Liquidity Pool: 14,000,000
-        </li>
-        <li xl:text-2xl>
-          Holder Airdrop: 12,320,000
-        </li>
-        <li xl:text-2xl>
-          Giveaways: 1,680,000
-        </li>
-      </ul>
-      <p class="dis" mb-4 pl-0 text-white lg:text-lg>
-        Profit of sales will go to Liquidity Pool with 14,000,000 $NOWLS token. For holders of Night Owls, 44% of token supply will be airdropped and 6% goes to giveaways.
-      </p>
-    </div>
-    <div class="lg:w-1/3" mb-4>
-      <img :src="token" mx-auto alt="Logo">
-    </div>
-  </section>
-
-  <section mx-auto min-h-screen items-center px-8 container md:flex-row space-y-4 lg:py-4 md:px-20 md:space-x-4 md:space-y-0>
-    <img :src="image" mx-auto border-rounded alt="Logo">
-    <h2 font-bold lg:px-3 lg:py-5 lg:text-4xl>
-      <a href="https://launchmynft.io/collections/5TMT36ueT1om5ZfwzvZpGFAtzJ6S7GTRrckxrUQqU37W/gf3WfCP7uL4J4kV26uEw"> Mint on launchmynft.io </a>
-    </h2>
-    <div id="mint-button-container" />
-    <div id="mint-counter" />
-  </section>
-
   <!-- Flexing 1 -->
-  <section v-if="nonslider[0].text" class="min-h-screen flex items-center justify-center">
+  <!-- <section v-if="nonslider[0].text" class="min-h-screen flex items-center justify-center">
     <TypeWritter :text="nonslider[0].text" :changeable="nonslider[0].changeable" class="text-4xl lg:text-6xl" />
-  </section>
+  </section> -->
   <!-- NFT Section -->
-  <TheNFT @nft-section-visible="startAnimations" />
+  <TheNFT min-h-screen @nft-section-visible="startAnimations" />
   <!-- Flexing 2 -->
-  <section v-if="nonslider[1].text" class="min-h-screen flex items-center justify-center">
+  <!-- <section v-if="nonslider[1].text" class="min-h-screen flex items-center justify-center">
     <TypeWritter :text="nonslider[1].text" :changeable="nonslider[1].changeable" class="text-4xl lg:text-6xl" />
-  </section>
+  </section> -->
 </template>

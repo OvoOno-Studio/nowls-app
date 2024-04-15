@@ -11,8 +11,8 @@ import {
 
 export default defineConfig({
   shortcuts: [
-    ['btn', 'px-4 py-1 rounded inline-block bg-white text-black cursor-pointer !outline-none hover:bg-purple-300 hover:text-white disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
-    ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-purple-300'],
+    ['btn', 'px-4 py-1 rounded inline-block bg-white text-black cursor-pointer !outline-none hover:bg-amber-600 hover:text-white disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
+    ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-amber-600'],
   ],
   presets: [
     presetUno(),
@@ -23,7 +23,7 @@ export default defineConfig({
     presetTypography(),
     presetWebFonts({
       fonts: {
-        sans: 'DM Sans',
+        sans: 'Special-Elite',
         serif: 'DM Serif Display',
         mono: 'DM Mono',
       },

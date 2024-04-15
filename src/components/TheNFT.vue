@@ -45,30 +45,19 @@ function startAnimations() {
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
-function handleMouseOver(event) {
-  event.target.style.transform = 'scale(1.1)'
-  event.target.style.opacity = '0.75'
-}
-
-function handleMouseLeave(event) {
-  event.target.style.transform = 'scale(1)'
-  event.target.style.opacity = '1'
-}
 </script>
 
 <template>
-  <div class="flex items-center justify-center bg-transparent">
+  <div class="z-0 flex items-center justify-center p-8">
     <div class="mx-auto max-w-screen-lg px-2">
-      <div class="nft-container grid grid-cols-2 gap-4 sm:grid-cols-4">
+      <div class="nft-container grid grid-cols-2 cursor-pointer gap-4 sm:grid-cols-4">
         <img
           v-for="(image, index) in images"
           :key="index"
           :src="image"
           alt="Night Owls Gif"
-          class="owl-animation h-auto w-full"
-          style="transition: transform 0.5s ease, opacity 0.5s ease;"
-          @mouseover="handleMouseOver"
-          @mouseleave="handleMouseLeave"
+          class="owl-animation h-auto w-full object-cover"
+          style="transition: transform 0.5s ease, opacity 0.5s ease; opacity: 0.5;"
         >
       </div>
     </div>
@@ -83,7 +72,7 @@ function handleMouseLeave(event) {
 }
 
 .owl-animation:hover {
-  transform: scale(1.1);
-  opacity: 0.75;
+  transform: scale(1.1) !important;
+  opacity: 1 !important;
 }
 </style>
