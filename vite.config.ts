@@ -137,7 +137,7 @@ export default defineConfig({
     }),
 
     // https://github.com/feat-agency/vite-plugin-webfont-dl
-    WebfontDownload(),
+    WebfontDownload('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Madimi+One&family=Metamorphous&family=Special+Elite&display=swap'),
 
     // https://github.com/webfansplz/vite-plugin-vue-devtools
     VueDevTools(),
