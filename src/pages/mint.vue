@@ -15,11 +15,14 @@ onMounted(() => {
 </script>
 
 <template>
+  <!-- Include External Stylesheet -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/scriptslmt/0.1.3/solana.css">
+
   <section class="mx-auto min-h-screen flex flex-col items-center justify-center gap-20 px-8 py-8 text-left text-black lg:flex md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0">
     <div class="rounded-xl bg-amber-6 p-8 px-10">
       <div class="py-8">
         <h1 class="text-4xl font-bold">
-          Mint yourself an owl
+          Get your Night Owl
         </h1>
         <hr class="mt-1 border-1 border-black">
       </div>
@@ -40,7 +43,7 @@ onMounted(() => {
             <img :src="launch" class="ml-2 w-8">
           </button>
         </div>
-        <div id="mint-counter" class="mt-4" />
+        <div id="mint-counter" class="wallet-adapter-button wallet-adapter-button-trigger mt-4" />
       </div>
     </div>
     <div class="mb-4">

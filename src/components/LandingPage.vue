@@ -32,18 +32,14 @@ const sections = [
   { id: 3, text: 'HOOT_HOOT', changeable: true, class: 'text-4xl lg:text-6xl' },
   { id: 4, text: 'NFT_SUPPLY: 2800', changeable: true, class: 'text-4xl lg:text-7xl' },
   { id: 5, text: '$NOWLS_SUPPLY: 28000000', changeable: true, class: 'text-4xl lg:text-7xl' },
-  { id: 6, text: 'PUBLIC_PRICE: 0.28 SOL', changeable: true, class: 'text-4xl lg:text-7xl' },
-  { id: 7, text: 'DOUBLE_REWARDS_WITH_SECOND_PURCHASE', changeable: true, class: 'text-4xl lg:text-6xl' },
-  { id: 8, text: 'NEVER_SLEEP', changeable: true, class: 'text-4xl lg:text-6xl' },
+  { id: 6, text: 'PUBLIC_PRICE: 0.13 SOL', changeable: true, class: 'text-4xl lg:text-7xl' },
+  { id: 7, text: 'NEVER_SLEEP', changeable: true, class: 'text-4xl lg:text-6xl' },
 ]
 
 const slider = sections.slice(0, 9)
 </script>
 
 <template>
-  <!-- Include External Stylesheet -->
-  <link rel="stylesheet" href="https://storage.googleapis.com/scriptslmt/0.1.3/solana.css">
-
   <!-- progress circle -->
   <div class="progress-circle-container">
     <svg class="progress-circle" viewBox="0 0 100 100">

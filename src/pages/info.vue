@@ -19,10 +19,7 @@ import banner from '~/assets/bannerNOWLS.jpg'
           NFTS Supply: 2800
         </li>
         <li xl:text-2xl>
-          Presale: 0.17 SOL
-        </li>
-        <li xl:text-2xl>
-          Public: 0.28 SOL
+          Mint Price: 0.13 SOL
         </li>
       </ul>
       <p class="dis font-mono" mb-4 pl-0 text-white lg:text-lg>

@@ -9,25 +9,27 @@ const socials = [
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center bg-stone-900 p-4">
+  <div class="items-center justify-center bg-stone-900 p-4 md:flex space-x-8">
     <!-- Social Items -->
+    <div>
+      <a>
+        <img :src="logoW" w-10 icon-btn> Night Owls
+      </a>
+    </div>
     <div>
       <a v-for="social in socials" :key="social.name" :href="social.link" target="_blank" rel="noopener noreferrer" icon-btn>
         <div :class="`${social.icon} w-10 h-10`" />
       </a>
     </div>
     <div>
-      <a>
-        <img :src="logoW" w-10 icon-btn>
-      </a>
-
       <a href="https://nftcalendar.io/b/solana/" target="_blank" icon-btn>
         As Seen On:
-        <img :src="logoC" w-10 icon-btn>
+        <img :src="logoC" w-18 icon-btn>
       </a>
     </div>
-    <p class="text-sm font-mono icon-btn">
-      © 2024 Night Owls
-    </p>
   </div>
+
+  <p class="text-sm font-mono icon-btn">
+    © 2024 Night Owls
+  </p>
 </template>
