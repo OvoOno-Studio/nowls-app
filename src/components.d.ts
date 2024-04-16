@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     LandingPage: typeof import('./components/LandingPage.vue')['default']
+    RouteController: typeof import('./components/RouteController.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TheFooter: typeof import('./components/TheFooter.vue')['default']
@@ -15,7 +16,6 @@ declare module 'vue' {
     TheLogoCalendar: typeof import('./components/TheLogoCalendar.vue')['default']
     TheNavbar: typeof import('./components/TheNavbar.vue')['default']
     TheNFT: typeof import('./components/TheNFT.vue')['default']
-    TypedText: typeof import('./components/TypedText.vue')['default']
     TypeWritter: typeof import('./components/TypeWritter.vue')['default']
   }
 }

@@ -1,6 +1,5 @@
 <script setup>
 import logofull from '~/assets/owl.gif'
-import banner from '~/assets/bannerNOWLS.jpg'
 </script>
 
 <template>
@@ -16,19 +15,26 @@ import banner from '~/assets/bannerNOWLS.jpg'
       <hr border-1 border-amber-600>
       <ul my-3 pl-0>
         <li xl:text-2xl>
-          NFTS Supply: 2800
+          <TypeWritter text="Supply: 2800" />
         </li>
         <li xl:text-2xl>
-          Mint Price: 0.13 SOL
+          <TypeWritter text="Mint Price: 0.13 SOL" />
         </li>
       </ul>
-      <p class="dis font-mono" mb-4 pl-0 text-white lg:text-lg>
+      <p class="mb-4 pl-0 text-sm text-white font-mono">
         Night Owls on Solana coming in 2800 unique NFTs. Holding NFT will guarantee access to the optimized trading tools with built-in node access. <br> <br> Each wallet will get airdrop of $NOWLS after the public sale.
       </p>
+      <div>
+        <router-link to="/token" class="cursor-pointer hover:text-amber-600">
+          <button btn>
+            view tokenomics
+          </button>
+        </router-link>
+      </div>
     </div>
   </section>
 
-  <section mx-auto min-h-screen flex-col items-center justify-center py-4 container lg:flex md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0>
+  <!-- <section mx-auto min-h-screen flex-col items-center justify-center py-4 container lg:flex md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0>
     <img :src="banner" class="lg:w-2/3" mx-auto border-rounded alt="Logo">
-  </section>
+  </section> -->
 </template>

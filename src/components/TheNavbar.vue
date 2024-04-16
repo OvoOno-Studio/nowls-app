@@ -16,7 +16,7 @@ function toggleMenu() {
 
 <template>
   <div class="sticky-nav-container z-90 flex justify-center">
-    <nav sticky top-0 w-xl flex items-center justify-between rounded-0 bg-stone-9 px-8 py-2 md:rounded-b-full>
+    <nav sticky top-0 w-4xl flex items-center justify-between rounded-0 bg-stone-9 px-8 py-2 md:rounded-b-full>
       <!-- Logo -->
       <router-link to="/" class="cursor-pointer hover:text-amber-600">
         <div :class="{ 'active-tab': $route.path === '/' }">
@@ -90,7 +90,9 @@ function toggleMenu() {
 <style scoped>
 .active-tab {
   border-bottom: 2px solid #d87606;
+  @apply text-amber-600;
 }
+
 .sticky-nav-container {
   position: sticky;
   top: 0;

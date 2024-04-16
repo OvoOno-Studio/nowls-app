@@ -1,45 +1,29 @@
 <script>
 export default {
   props: {
-    changeable: {
-      type: Boolean,
-      default: false,
-    },
     text: {
       type: String,
-      default: 'Night Owl.',
-    },
-  },
-  data() {
-    return {
-      letters: [],
-    }
-  },
-  watch: {
-    text(newVal) {
-      this.letters = newVal.split('')
+      default: 'Welcome to Night Owls',
     },
   },
   mounted() {
-    this.startTypewriterAnimation()
+    this.animateText()
   },
   methods: {
-    startTypewriterAnimation() {
-      const animateLetters = () => {
-        this.letters.forEach((letter, index) => {
-          setTimeout(() => {
-            this.letters[index] = letter
-          }, index * 100)
-        })
-        setTimeout(() => {
-          this.letters = []
-          setTimeout(() => {
-            this.letters = this.text.split('')
-            animateLetters()
-          }, 100)
-        }, this.letters.length * 100)
+    animateText() {
+      const text = this.text
+      const span = this.$refs.animatedText
+      let index = 0
+
+      function animate() {
+        if (index < text.length) {
+          span.textContent += text.charAt(index)
+          index++
+          setTimeout(animate, 100)
+        }
       }
-      animateLetters()
+
+      animate()
     },
   },
 }
@@ -47,25 +31,13 @@ export default {
 
 <template>
   <div>
-    <span v-for="(letter, index) in letters" :key="index" class="inline-block icon-btn" :style="{ animationDelay: `${index * 100}ms` }">
-      {{ letter }}
-    </span>
+    <span ref="animatedText" class="animated-text" />
   </div>
 </template>
 
-  <style scoped>
-  @keyframes typewriter {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-span {
-  animation: typewriter 0.5s ease forwards;
+<style scoped>
+.animated-text {
+  overflow: hidden;
+  white-space: nowrap;
 }
 </style>
