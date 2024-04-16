@@ -27,7 +27,7 @@ import logofull from '~/assets/owl.gif'
       <div>
         <router-link to="/token" class="cursor-pointer hover:text-amber-600">
           <button btn>
-            view tokenomics
+            $NOWLS
           </button>
         </router-link>
       </div>

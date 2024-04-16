@@ -1,19 +1,20 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import token from '~/assets/nowlsToken.png'
-import road from '~/assets/roadmap.jpg'
 
 const tokenomicsTexts = [
-  'Supply: 28,000,000',
-  'Liquidity Pool: 14,000,000',
-  'Holder Airdrop: 12,320,000',
-  'Giveaways: 1,680,000',
+  '- Supply: 28,000,000',
+  '- Liquidity Pool: 14,000,000',
+  '- Holder Airdrop: 12,320,000',
+  '- Giveaways: 1,680,000',
 ]
 
 const roadmapTexts = [
-  'Trading Tools, RPC Access',
-  '$NOWLS Airdrop',
-  'Access Alpha Channels',
+  '- Presale',
+  '- Public Mint',
+  '- Tool Access',
+  '- $NOWLS Airdrop',
+  '- Access Alpha Channels',
 ]
 
 const showTokenomicsTexts = ref(Array(tokenomicsTexts.length).fill(false))
@@ -62,30 +63,6 @@ onMounted(() => {
           </button>
         </router-link>
       </div>
-    </div>
-  </section>
-
-  <section class="min-h-screen flex flex-col items-center justify-center gap-20 px-8 py-8 lg:flex md:flex-row space-y-4 lg:px-8 md:px-20 md:space-x-4 md:space-y-0">
-    <div class="mb-4 w-60 flex items-center justify-center">
-      <img :src="road" alt="Logo">
-    </div>
-    <div class="z-50 my-4 flex-col text-left font-bold font-sans lg:w-1/3">
-      <div class="mb-4 text-3xl lg:text-6xl xl:text-6xl">
-        <h2>
-          $NOWLS Roadmap
-        </h2>
-        <hr class="border-1 border-amber-600">
-      </div>
-
-      <ul class="my-3 pl-0">
-        <li v-for="(text, index) in roadmapTexts" :key="index" class="xl:text-2xl">
-          <TypeWritter v-if="showRoadmapTexts[index]" :text="text" />
-        </li>
-      </ul>
-      <button flex items-center justify-center gap-2 btn>
-        <a href="https://discord.gg/3HAHYXsgPy"> Join Discord</a>
-        <div i-carbon:logo-discord />
-      </button>
     </div>
   </section>
 </template>
