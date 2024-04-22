@@ -9,28 +9,13 @@ const tokenomicsTexts = [
   '- Giveaways: 1,680,000',
 ]
 
-const roadmapTexts = [
-  '- Presale',
-  '- Public Mint',
-  '- Tool Access',
-  '- $NOWLS Airdrop',
-  '- Access Alpha Channels',
-]
-
 const showTokenomicsTexts = ref(Array(tokenomicsTexts.length).fill(false))
-const showRoadmapTexts = ref(Array(roadmapTexts.length).fill(false))
 
 onMounted(() => {
   tokenomicsTexts.forEach((text, index) => {
     setTimeout(() => {
       showTokenomicsTexts.value[index] = true
     }, (index + 1) * 1000)
-  })
-
-  roadmapTexts.forEach((text, index) => {
-    setTimeout(() => {
-      showRoadmapTexts.value[index] = true
-    }, (index + 1) * 1500)
   })
 })
 </script>
