@@ -53,6 +53,15 @@ function toggleMenu() {
           </div>
         </div>
       </router-link>
+      <!-- Team Tab -->
+      <router-link to="/team" class="cursor-pointer hover:text-amber-600">
+        <div :class="{ 'active-tab': $route.path === '/team' }">
+          <div class="group relative cursor-pointer transition ease-in-out">
+            <span class="md:text-amber-600">team</span>
+            <span class="absolute inset-x-0 bottom-0 h-[2px] scale-x-0 transform bg-amber-600 transition-transform duration-300 ease-in-out group-hover:scale-x-100" />
+          </div>
+        </div>
+      </router-link>
       <!-- Hamburger Icon for Mobile -->
       <div class="flex md:hidden">
         <button type="button" class="text-white hover:text-amber-600 focus:outline-none" aria-label="Toggle menu" @click="toggleMenu">
