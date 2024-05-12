@@ -24,25 +24,21 @@ onMounted(() => {
           Get your Night Owl
         </h1>
         <hr class="mt-1 border-1 border-amber-6">
-      </div>
-      <div class="py-4">
+        <br>
+        <ul>
+          <li> Public mint time: 17th May 4pm UTC </li>
+          <li> Public mint price: 11 SEI 20 per wallet </li>
+          <li> OG & WL Mint time: 16th May 4pm UTC </li>
+          <li> OG & WL Mint price: 6 SEI 10 per wallet </li>
+        </ul>
+        <br>
         <h2 class="mb-2 text-2xl font-bold">
-          Mint Here
+          Mint SEI Night Owl here
         </h2>
-        <div id="mint-button-container" />
-        <div class="flex items-center">
-          <span class="mt-8">Or</span>
-        </div>
-        <div class="mt-4 py-4">
-          <h2 class="mb-2 text-2xl font-bold">
-            Mint on Launchmynft.io
-          </h2>
-          <button class="flex items-center rounded bg-black px-4 py-2 text-sm text-white font-bold hover:bg-stone-900">
-            <a href="https://launchmynft.io/collections/5TMT36ueT1om5ZfwzvZpGFAtzJ6S7GTRrckxrUQqU37W/gf3WfCP7uL4J4kV26uEw" target="_blank">Go to Launchmynft.io</a>
-            <img :src="launch" class="ml-2 w-8">
-          </button>
-        </div>
-        <div id="mint-counter" class="wallet-adapter-button wallet-adapter-button-trigger mt-4" />
+        <button class="flex items-center rounded bg-black px-4 py-2 text-sm text-white font-bold hover:bg-stone-900">
+          <a href="https://mint-sei-nowls.vercel.app/" target="_blank">Mint Page</a>
+          <img :src="launch" class="ml-2 w-8">
+        </button>
       </div>
     </div>
   </section>
