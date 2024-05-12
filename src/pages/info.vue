@@ -1,6 +1,6 @@
 <script setup>
 import logofull from '~/assets/owl.gif'
-import road from '~/assets/roadmap.jpg'
+import road from '~/assets/roadmap.png'
 
 const roadmapTexts = [
   '- Presale',
